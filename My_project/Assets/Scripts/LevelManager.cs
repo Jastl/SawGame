@@ -21,5 +21,5 @@ public static class LevelManager
     }
 }
 
-/* 1lvl - 50exp; 2lvl - 75exp; 3lvl - 100exp... etc
+// 1lvl - 50exp; 2lvl - 75exp; 3lvl - 100exp... etc 
 
