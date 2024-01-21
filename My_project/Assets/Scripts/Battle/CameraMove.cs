@@ -5,6 +5,7 @@ public class CameraMove : MonoBehaviour
 {
     public float smooth_speed_move = 0.025f;
     public float smooth_speed_size = 0.015f;
+    public float indexSize = 1.5f;
     public Vector3 offset = new Vector3(0, 0, -10);
     public Transform target;
 
@@ -21,7 +22,8 @@ public class CameraMove : MonoBehaviour
         {
             if (target_size < camera_size) camera.orthographicSize -= smooth_speed_size;
             else if (target_size > camera_size) camera.orthographicSize += smooth_speed_size;
-        } 
+        }
+        ChangeSize(target.GetComponent<Saw>().lenght_chain * indexSize);
     }
     public void ChangeSize(float size)
     {

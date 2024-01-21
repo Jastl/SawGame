@@ -1039,6 +1039,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   saw0: {fileID: 334907953}
   saw1: {fileID: 1269054000}
+  lenght_chain: 0
+  speed_rotation: 0
+  damage: 0
 --- !u!1 &425460192
 GameObject:
   m_ObjectHideFlags: 0
@@ -1294,6 +1297,7 @@ GameObject:
   - component: {fileID: 519420032}
   - component: {fileID: 519420031}
   - component: {fileID: 519420029}
+  - component: {fileID: 519420033}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1367,6 +1371,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &519420033
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 519420028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c901ccdfb8680da4a89f18dad5aad796, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  time: 0
 --- !u!1 &658845331
 GameObject:
   m_ObjectHideFlags: 0
@@ -1799,16 +1816,19 @@ MonoBehaviour:
   sawPrefab: {fileID: 6053358312414037397, guid: bd7cebecf4ccccb44abfa1ff4bf8bcda, type: 3}
   chains:
   - image: {fileID: 21300000, guid: 7372b644484298d47bdff85235597646, type: 3}
-    lvl: 0
+    skill:
+      icon: {fileID: 21300000, guid: 179edfb663377f6439735dd614093b45, type: 3}
     minLenght: 4
     maxLenght: 6
   discs:
   - image: {fileID: 21300000, guid: 1cb783900e8311a439c29a8d55d01dea, type: 3}
-    lvl: 0
+    skill:
+      icon: {fileID: 0}
     speedRotation: 2
   teeth:
   - image: {fileID: 21300000, guid: 3bf4ea7488b03e44887a37d8616ddd67, type: 3}
-    lvl: 0
+    skill:
+      icon: {fileID: 0}
     damage: 0
 --- !u!4 &960572075
 Transform:
@@ -1818,7 +1838,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 960572073}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.22439219, y: 3.195599, z: -0.030613491}
+  m_LocalPosition: {x: 2.81, y: 4.93, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

@@ -1,6 +1,8 @@
 using UnityEngine;
 using Skills;
 using Parts;
+using System.Runtime.InteropServices.WindowsRuntime;
+
 public class PartsSawManager : MonoBehaviour
 {
     public GameObject sawPrefab;
@@ -52,6 +54,10 @@ public static class PartsSaw
         currentDisc = discs[discIndex];
         currentTeeth = teeth[teethIndex];
     }
+    public static void SetSkills(GameObject saw)
+    {
+        chains[0].SetSkill(new MultipleA(saw, ParametrSaw.SpeedRotation, 5, 3, 5, "energy_bar"));
+    }
 }
 namespace Parts
 {
@@ -60,7 +66,21 @@ namespace Parts
     {
         public Sprite image;
         public Skill skill;
-        public int lvl;
+
+        public void SetSkill(Skill skill) => this.skill = skill;
+        public void UseSkill() => skill.Activate();
+        public Skill GetSkill()
+        {
+            return skill;
+        } 
+        public Skill.UpdateD GetUpdate()
+        {
+            return skill.updateD;
+        }
+        public Skill.TimerD GetTimer()
+        {
+            return skill.timerD;
+        }
     }
     [System.Serializable]
     public class ChainPart : Part
